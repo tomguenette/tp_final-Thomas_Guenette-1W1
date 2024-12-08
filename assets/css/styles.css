@@ -1,0 +1,517 @@
+@import url(./reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Poly:ital@0;1&display=swap');
+
+:root {
+    --couleur-byleth: #624fa0;
+    --couleur-black-eagles: #b42537;
+    --couleur-blue-lions: #414d97;
+    --couleur-golden-deers: #c7ac3b;
+    --couleur-pale: #5bd497;
+    --couleur-texte: rgba(255, 255, 255, 0.7);
+    --espacement-lg: 20px;
+    --espacement-md: 15px;
+    --espacement-sm: 10px;
+    --espacement-xl: 25px;
+    --espacement-xxl: 50px;
+    --espacement-xxxl: 100px;
+    --police-principale: "Poly";
+    --texte-lg: 24px;
+    --texte-md: 18px;
+    --texte-sm: 14px;
+    --texte-xl: 36px;
+    --texte-xxl: 48px;
+    --texte-xxxl: 64px;
+}
+
+@keyframes animnav{
+    0%{
+        font-size: 1.75rem;
+    }
+    100%{
+        color: var(--couleur-blue-lions);
+        font-size: 2rem;
+    }    
+}
+
+@keyframes animlien{
+    0%{
+        font-size: var(--texte-lg);
+    }
+    100%{
+        color: white;
+        font-size: var(--texte-xl);
+    }    
+}
+
+@keyframes animgrow{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+       transform: scale(1.5);
+       z-index: 100;
+    }    
+}
+
+body{
+   background-image: url(../images/brick-wall-dark.png);
+    height: 500vh;
+    font-family: var(--police-principale);
+}
+h1{
+    font-size: var(--texte-xxxl);
+}
+
+h2{
+    font-size: var(--texte-xxl);
+}
+
+h3{
+    font-size: var(--texte-xl);
+}
+
+h4{
+    font-size: var(--texte-lg);
+}
+
+h5{
+    font-size: var(--texte-md);
+}
+
+h6{
+    font-size: var(--texte-sm);
+}
+
+header{  
+    position: fixed;
+    background-color: #5bd497;
+    border: 2px solid black;
+    min-height: 15vh;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+}
+
+main{
+    padding-top: 50px;
+}
+
+footer{
+    min-height: 20vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+/*Nav*/
+nav{
+    display: flex;
+    width: 100%;
+    min-height: 10vh;
+}
+
+nav img{
+    width: 75%;
+    height: auto;
+    padding: 1rem;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: left;
+}
+
+nav ul li{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    align-items: center;
+   
+}
+
+nav ul li a{
+    font-size: 1.75rem;
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover{
+    animation: animnav 500ms ease-in-out;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+
+nav ul li a:active{
+    color: var(--couleur-black-eagles);
+}
+/*Fin Nav*/
+
+/*section hero*/
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+.hero > img{
+    width: 100%;
+    box-shadow: 14px 14px 17px -7px #000000;
+}
+/*fin section hero*/
+
+/*section Acceuil*/
+#acceuil{
+    padding: 2rem;
+}
+/*fin section acceuil*/
+
+/*section desc.*/
+#description{
+    padding: 2rem;
+    border: 5px black solid;
+    background-color: var(--couleur-pale);
+    margin: 1rem;
+}
+    
+
+#description p{
+    text-align: left;
+    font-size: 1.5rem;
+    
+}
+/*Fin section Desc.*/
+
+/*Section Personnages*/
+#personnages{
+    padding: 2rem;
+}
+/*Byleth*/
+.personnages div:nth-child(2){
+    display: flex;
+    flex-direction: row-reverse;
+    border: black 2px solid;
+    background-color: #624fa0;
+    height: 110vh;
+    margin: 1rem;
+}
+
+.personnages div:nth-child(2) h3{
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+    color: white;
+}
+
+.personnages div:nth-child(2) p{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    line-height: 3rem;
+    padding: 2rem;
+    color: white;
+}
+
+.personnages div:nth-child(2) img{
+    display: flex;
+    padding: 2.5rem;
+
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    height: 75%;
+}
+/*fin section Byleth*/
+
+/*Black Eagles*/
+.personnages div:nth-child(3){
+    display: flex;
+    border: black 2px solid;
+    background-color: #b42537;
+    height: 110vh;
+    margin: 1rem;
+}
+
+.personnages div:nth-child(3) h3{
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+    color: white;
+}
+
+.personnages div:nth-child(3) p{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 2rem;
+    line-height: 3rem;
+    color: white;
+}
+/*Fin section Black Eagles*/
+
+/*Blue Lions*/
+.personnages div:nth-child(4){
+    display: flex;
+    flex-direction: row-reverse;
+    border: black 2px solid;
+    background-color: #414d97;
+    height: 110vh;
+    margin: 1rem;
+}
+
+.personnages div:nth-child(4) h3{
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+    color: white;
+}
+
+.personnages div:nth-child(4) p{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    padding: 2rem;
+    line-height: 3rem;
+}
+/*fin section Blue lions*/
+
+/*Golden deer*/
+.personnages div:nth-child(5){
+    display: flex;
+    border: black 2px solid;
+    background-color: #c7ac3b;
+    height: 110vh;
+    margin: 1rem;
+}
+
+.personnages div:nth-child(5) h3{
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+    color: white;
+}
+
+.personnages div:nth-child(5) p{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    padding: 2rem;
+    line-height: 3rem;
+}
+/*Fin section Golden Deers*/
+/*Fin Sections Personnages*/
+
+/*Tableau*/
+table {
+    border: 5px solid rgb(0, 0, 0);
+    overflow: scroll;
+    max-height: 75vh;
+    width: 100%;
+}
+
+thead{
+    background-color: #5bd497;
+}
+
+thead tr th{
+    text-align: center;
+    padding: 0.1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 3px solid black;
+}
+
+tbody{
+    background-color: white;
+}
+
+tbody tr td{
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border: 3px solid black;
+}
+
+tbody tr:first-child td{
+    background-color: var(--couleur-byleth);
+    color: white;
+}
+
+tbody tr:nth-child(2),
+tr:nth-child(3),
+tr:nth-child(4),
+tr:nth-child(5),
+tr:nth-child(6),
+tr:nth-child(7),
+tr:nth-child(8), 
+tr:nth-child(9){
+    background-color: var(--couleur-black-eagles);
+    color: white;
+}
+
+tbody tr:nth-child(10),
+tr:nth-child(11),
+tr:nth-child(12),
+tr:nth-child(13),
+tr:nth-child(14),
+tr:nth-child(15),
+tr:nth-child(16), 
+tr:nth-child(17){
+    background-color: var(--couleur-blue-lions);
+    color: white;
+}
+
+tbody tr:nth-child(18),
+tr:nth-child(19),
+tr:nth-child(20),
+tr:nth-child(21),
+tr:nth-child(22),
+tr:nth-child(23),
+tr:nth-child(24), 
+tr:nth-child(25){
+    background-color: var(--couleur-golden-deers);
+    color: white;
+}
+
+.titre-tableau{
+    padding: 2rem;
+}
+
+.tableau-conteneur{
+    overflow-y: scroll;
+    max-height: 60vh;
+    width: 100%;
+    padding: 2rem;
+}
+
+.sprite{
+    width: 10%;
+}
+/*Fin Tableau*/
+
+/*Section Annonces*/
+#trailer{
+    border: 2px solid black;
+    padding: 2rem;
+}
+
+#trailer a{
+    display: flex;
+    flex-direction: column;
+    font-size: var(--texte-lg);
+    padding: 2rem;
+    text-decoration: none;
+}
+
+#trailer a:hover{
+    animation: animlien 1000ms ease-in-out;
+    animation-fill-mode: forwards;
+}
+/*fin section Annonces*/
+
+/*Gallerie d'images*/
+.gallerie-images{
+    padding: 2rem;
+
+}
+
+.gallerie{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    border: 5px black solid;
+    background-color: var(--couleur-byleth);
+
+}
+
+.gallerie img{
+    width: 30%;
+    padding: 0.5rem;
+}
+
+.gallerie img:hover{
+    animation: animgrow 500ms ease-in-out;
+    animation-fill-mode: forwards;
+}
+/*fin Gallerie d'images*/
+
+/*section Form*/
+form{
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    margin: auto;
+
+    border: 2px solid black;
+    padding: 2rem;
+    background-color: var(--couleur-byleth);
+    color: white;
+}
+
+form section{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+form .input-group{
+    padding: 0.5rem;
+}
+
+form input, form textarea, form select {
+    border:  2px solid black;
+    width: 50%;
+    border-radius: 25px;
+
+    padding: 0.5rem;
+    font-family:var(--police-principale);
+
+
+}
+/*fin section form*/
+
+/*section Source*/
+#source{
+    padding: 2rem;
+}
+
+#source a{
+    display: flex;
+    flex-direction: column;
+    font-size: var(--texte-lg);
+    padding: 2rem;
+    text-decoration: none;
+}
+
+#source a:hover{
+    animation: animlien 1000ms ease-in-out;
+    animation-fill-mode: forwards;
+}
+/*fin section source*/
+
+/*footer*/
+.adresse,
+.departement,
+.socials,
+.avis{
+    display: flex;
+    flex-direction: column;
+   padding: 1rem;
+}
+
+.socials ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+
